@@ -7,13 +7,13 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
- 
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
 }
 
 ul {
@@ -47,7 +47,7 @@ h3 {
   margin-bottom: 20px;
 }
 
-.flex-space, .flex-nav {
+.flex-space {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -70,7 +70,6 @@ h3 {
 .btn:hover, 
 .contact-input a:hover {
   background-color: #23cdaf;
-  cursor: pointer;
   transition: all ease 0.2s;
 }
 
@@ -84,6 +83,9 @@ h3 {
 
 nav {
   box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -105,8 +107,8 @@ nav ul {
 }
 
 nav ul li a  {
-  display: block;
-  height: 44px;
+  display: flex;
+  height: 40px;
   line-height: 43px;
   margin: 3px;
   padding: 0px 22px;
@@ -413,9 +415,6 @@ footer p {
   color: #5f5f5f;
   font-size: 0.9rem;
 }
-@media(max-width: 1140px){
-
-}
 
 @media(max-width:900px){
   @keyframes fadeIn {
@@ -428,18 +427,17 @@ footer p {
     }
   }
   
-  h3 {
-    font-size: 2.3rem;
+  h3, .contact h3 {
+    font-size: 2.2rem;
     text-align: center;
+  }
+
+  span {
+    font-size: 16px;
   }
 
   .logo img {
     height: 35px;
-    margin-right: 200px;
-  }
-
-  .hey {
-    margin-left: 200px;
   }
 
   .content {
@@ -458,13 +456,14 @@ footer p {
   }
 
   .main-text h1 {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 
   .menu {
     display: none;
     position: absolute;
     top: 65px;
+    left: 0px;
     background-color: #fff;
     border-bottom: 4px solid #1db096;
     width: 100%;
@@ -572,8 +571,8 @@ footer p {
     object-position: left;
   }
 
-  span {
-    font-size: 16px;
+  .skill-heading h2 {
+    font-size: 2.2rem;
   }
 
   .recent-heading {
@@ -586,13 +585,62 @@ footer p {
   }
 
   footer {
+    margin-bottom: 60px;
+  }
+}
+
+@media(max-width: 720px){
+  .model {
+    display: none;
+  }
+  
+  .main-text {
+    width: 80%;
+    transform: translateY(40px);
+    margin-bottom: 50px;
+  }
+
+  #contact img {
+    height: 200px;
+  }
+
+  .recent-btn {
+    margin: 0px;
+  }
+
+  footer {
+    justify-content: center;
+    padding: 10px 20px;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+
+@media(max-width: 530px){
+  .contact-input {
+    width: 90%;
+  }
+
+  .skill-img {
+    display: none;
+  }
+
+  #skills {
+    margin: 0px;
+  }
+
+  .skill-text {
+    width: 85%;
+  }
+
+  footer {
     flex-direction: column;
-    margin: 30px 0;
-    padding: 20px;
   }
 
   footer p {
-    margin: 0;
+    font-size: 12px;
+    margin-bottom: 4px;
   }
 }
 
