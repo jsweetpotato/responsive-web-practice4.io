@@ -427,7 +427,7 @@ footer p {
     }
   }
   
-  h3, .contact h3 {
+  h3, #contact h3 {
     font-size: 2.2rem;
     text-align: center;
   }
